@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Home</title>
+
+  <!-- SEO Best Practices -->
+  <meta name="description" content="Cyber Security Specialist and Developer Portfolio">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- Navbar Placeholder injected via JS -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <section class="hero">
+      <p class="status mono-text">&gt; system.status: <span class="typewrite" data-wait="2000"
+          data-words='["ONLINE", "SECURE", "READY"]'></span><span class="cursor">_</span></p>
+
+      <!-- Placeholder name -->
+      <h1 class="glitch" data-text="Tasfiul Mostafa">Tasfiul Mostafa</h1>
+
+      <h2>Security Analyst & Software Developer</h2>
+
+      <p>Technical builder focused on <strong>Information Security</strong>,
+        <strong>Web Development</strong>, and <strong>Systems Programming</strong>.
+        Experienced in delivering digital solutions through <strong>AI Orchestration</strong>
+        and securing environments via proactive threat analysis.
+      </p>
+
+      <div class="cta-group">
+        <a href="projects.html" class="btn btn-primary" id="btn-projects">Init.Projects()</a>
+        <a href="contact.html" class="btn btn-outline" id="btn-contact">Connect(Me)</a>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    /* Blinking cursor for typewriter effect */
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      animation: blink 0.75s step-end infinite;
+      color: var(--primary-color);
+    }
+
+    @keyframes blink {
+
+      from,
+      to {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</body>
+
+</html>

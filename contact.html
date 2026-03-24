@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Contact</title>
+
+  <meta name="description" content="Contact me for security consulting or web development.">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <div class="page-content">
+      <h1 class="page-title mono-text">&gt; Secure_Comm_Channel</h1>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>[ Initiate Handshake ]</h2>
+          <p>Looking for a security audit, web application development, or just want to talk about tech? Send a
+            transmission through the secure line below.</p>
+
+          <ul class="contact-details">
+            <li>
+              <strong>Email:</strong>
+              <span class="mono-text">mostafatasfiul@gmail.com</span>
+            </li>
+            <li>
+              <strong>Facebook:</strong>
+              <span class="mono-text">Tasfiul Mostafa</span>
+            </li>
+            <li>
+              <strong>Github:</strong>
+              <a href="https://github.com/Tasfiul" target="_blank" class="mono-text">Tasfiul</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div id="formSuccess" class="success-msg">
+              <span class="mono-text">&gt; Transmission Sent Successfully. Awaiting reply...</span>
+            </div>
+
+            <div class="form-group" id="nameGroup">
+              <label for="senderName" class="form-label">Name:</label>
+              <input type="text" id="senderName" class="form-control" required placeholder="Enter your name">
+              <span class="error-msg">Error: Sender name is required.</span>
+            </div>
+
+            <div class="form-group" id="emailGroup">
+              <label for="senderEmail" class="form-label">Email:</label>
+              <input type="email" id="senderEmail" class="form-control" required placeholder="name@domain.com">
+              <span class="error-msg">Error: Valid return address is required.</span>
+            </div>
+
+            <div class="form-group" id="msgGroup">
+              <label for="senderMsg" class="form-label">Message:</label>
+              <textarea id="senderMsg" class="form-control" required placeholder="Enter your message..."></textarea>
+              <span class="error-msg">Error: Message cannot be empty.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Execute.Send()</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
