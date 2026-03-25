@@ -11,9 +11,10 @@
   /* Green */
   --secondary-bg: #111111;
   --border-color: #222222;
-  --font-main: 'Inter', system-ui, sans-serif;
+  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-mono: 'Fira Code', 'Courier New', monospace;
   --transition-speed: 0.3s;
+  --grid-color: rgba(0, 255, 204, 0.15);
 }
 
 [data-theme="light"] {
@@ -25,6 +26,7 @@
   --secondary-color: #007700;
   --secondary-bg: #ffffff;
   --border-color: #cccccc;
+  --grid-color: rgba(0, 91, 181, 0.12);
 }
 
 * {
@@ -53,13 +55,13 @@ body {
 /* Grid Background */
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 30px 30px;
   z-index: -1;
   pointer-events: none;
@@ -318,6 +320,24 @@ main {
   }
 }
 
+/* Cursor Animation */
+.cursor {
+  animation: blink 0.75s step-end infinite;
+  color: var(--primary-color);
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 /* Home Hero Section */
 .hero {
   display: flex;
@@ -542,7 +562,7 @@ main {
 .skills-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 5rem;
   margin-top: 2rem;
 }
 
